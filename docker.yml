@@ -21,3 +21,6 @@
     apt:
       name: docker-ce
       update_cache: yes
+      
+  - name: remove container
+    command: docker container run -d -p 30105:80 --name fs-adi-docker adityaprabhakara/myprod-adi
