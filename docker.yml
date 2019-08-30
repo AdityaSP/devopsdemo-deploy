@@ -1,0 +1,23 @@
+- hosts: uat-reg
+  become: true
+  gather_facts: no
+  tasks:
+  - name: install dependent packages
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+    with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+  - name: add docker key
+    shell: 'curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - '
+  
+    #- name: add docker package
+    #shell:add-apt-repository "deb https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
+
+  - name: install docker
+    apt:
+      name: docker-ce
+      update_cache: yes

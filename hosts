@@ -1,0 +1,6 @@
+[uat-reg]
+34.228.11.112 ansible_user=ubuntu ansible_ssh_private_key_file=/root/aug29/uat-reg.pem  
+[uat-docker]
+34.203.195.112 ansible_user=ubuntu ansible_ssh_private_key_file=/root/aug29/uat-reg.pem  
+#[jenkins-slave]
+#3.92.192.151 ansible_user=ubuntu ansible_ssh_private_key_file=/root/aug29/uat-reg.pem  
