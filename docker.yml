@@ -1,4 +1,4 @@
-- hosts: uat-reg
+- hosts: uat-docker
   become: true
   gather_facts: no
   tasks:
